@@ -1,0 +1,54 @@
+<div class="main-content">
+  <div class="info">
+    <h4>Admitted</h4>
+    <p>{{patientadmitted}}</p>
+    <h4>Died</h4>
+    <p>{{death}}</p>
+    <!-- <h4 > Notification</h4> -->
+    <!-- <div *ngIf='notificationarray!=undefined' class="notification" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+      <div class="data">
+      <div *ngFor='let noti of notificationarray;index as i'>
+      <p>{{noti}}</p>
+        </div>
+      </div>
+      </div> -->
+  </div>
+  <div class="inner-div-1">
+    <div *ngIf="totalrooms != undefined" class="roomrow">
+      <div *ngFor="let room of totalrooms;let ind =index">
+          <div
+            *ngIf="roomid.indexOf(room.id)!=-1; else elseblock"
+            class="patient-true"
+          >
+            <div class="room-indi-patient">
+              <div>
+                <img
+                  src="../../../assets/—Pngtree—vector painted open door_2564653.png"
+                  class="door"
+                />
+                <img
+                  src="../../../assets//patient-icon-9249.png"
+                  class="patient"
+                />
+              </div>
+              <div class="treat-div">
+                <button class="btn-treat" (click)=giveMedication(room.id,roomid.indexOf(room.id),ind) >Treat</button>
+              {{timerarray[roomid.indexOf(room.id)].timer}}
+              <!-- {{emergency[roomid.indexOf(room.id)]}} -->
+              <div *ngIf="timerarray[roomid.indexOf(room.id)]['timer']>=55&&emergency[roomid.indexOf(room.id)]!=true">
+                Emergency
+              </div>
+              </div>
+            </div>
+          </div>
+   <ng-template #elseblock>
+          <img
+            src="../../../assets/—Pngtree—vector painted open door_2564653.png"
+            class="door"
+          />
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+ 

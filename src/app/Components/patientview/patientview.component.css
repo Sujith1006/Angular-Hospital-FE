@@ -1,0 +1,28 @@
+.maincontent{
+  position: absolute;
+  top: 5em;
+  left: 18em;
+  width: 74%;
+  background-color: white;
+  box-shadow: 1px 1px 10px 0px grey;
+  
+}
+.heading h1{
+  text-align: center;
+}
+
+table{
+  overflow-y:scroll;
+  height:468px;
+  display: block;
+  /* overflow: hidden; */
+}
+table::-webkit-scrollbar{
+  display: none;
+}
+ th{
+  position: sticky;
+  top: 0;
+  background-color:#bfd0e6;
+
+}

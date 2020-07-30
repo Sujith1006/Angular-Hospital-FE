@@ -1,0 +1,36 @@
+<div class="maincontent">
+  <div class="heading">
+    <h1>Patients</h1>
+    <div class="table-data">
+    <table style="width: 100%; height: 430px;" cellpadding='20'>
+      <tr > 
+        <th>Name</th>
+        <th>Address</th>
+        <th>Bloodgroup</th>
+        <th>Gender</th>
+        <th>Symptoms</th>
+        <th>Mobilenumber</th>
+        <th>Discharge</th>
+      </tr>
+      <tr *ngFor='let patient of allpatients'>
+        <td>{{patient['Patientname']}}
+          </td>
+          <td>{{patient['PatientAddress']}}
+          </td>
+          <td>{{patient['PatientBloodgroup']}}
+          </td>
+          <td>{{patient['PatientGender']}}
+          </td>
+          <td>{{patient['PatientSymptoms']}}
+          </td>
+          <td>{{patient['PatientPhonenumber']}}
+          </td>
+          <td *ngIf="patient['Discharged']==true;else elseblock">Yes
+          </td>
+          <ng-template #elseblock><td>No</td></ng-template>
+          
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>

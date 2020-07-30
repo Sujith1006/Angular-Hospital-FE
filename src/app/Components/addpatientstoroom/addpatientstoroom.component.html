@@ -1,0 +1,26 @@
+<div class="main-content">
+  <h1>Patients list</h1>
+  <div *ngIf="patients != undefined">
+    <div *ngFor="let patient of patients;let i = index" class="list">
+      <div class="indi-patient">
+        <h3>{{ patient["Patientname"] }}</h3>
+        <button class="assign-room" (click)="Assignroom(patient,i)">Assign Room</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf='showblock==true' class="room-details">
+  <img src='../../../assets//error.png' class="close-btn" (click)='closediv()'/>
+  <div class="room-top"><h1>
+    Room Details
+    </h1>
+    </div>
+    <div *ngIf='room!=undefined'>
+      <div *ngFor='let rooms of room;let i = index'>
+        <div class="indi-rooms">
+        <h3>Room  :{{  i  }}</h3>
+        <button class="room-assign" (click)='addroomtopatient(rooms,i)' >Assign Room</button>
+        </div>
+        </div>
+      </div>
+  </div>

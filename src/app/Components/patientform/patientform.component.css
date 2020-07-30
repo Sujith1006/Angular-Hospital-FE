@@ -1,0 +1,82 @@
+.main-form{
+  position: absolute;
+  top: 4.5em;
+  left: 32em;
+  box-shadow: 1px 2px 16px grey;
+  background-color: white;
+  border-radius: 10px;
+  height: 85%;
+}
+.input-box {
+  display: inline-flex;
+  flex-direction: column;
+}
+.input-box * {
+  margin: 10px;
+  display: flex;
+}
+label{
+  width: 100px;
+  font-weight: 600;
+}
+.text-area{
+  height: 20px;
+}
+.main-form h1{
+text-align: center;
+}
+.submit {
+  justify-content: center;
+}
+.submit button{
+  background-color: #6a9effe3; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+ cursor: pointer;
+}
+.patient-name-input{
+  border: none;
+  border-bottom: 1px solid;
+  width: 16rem;
+  outline: none;
+  border-radius: 3px;
+}
+.patient-address-textarea{
+  border: none;
+  border-bottom: 1px solid;
+  width: 16rem;
+  outline: none;
+  border-radius: 3px;
+}
+.req{
+  display: flex;
+  justify-content: flex-end;
+  color: red;
+  margin: 0;
+}
+.error{
+  border: none;
+  border-bottom: 1px solid red;
+  width: 16rem;
+  outline: none;
+  border-radius: 3px;
+}
+.text-error{
+  border: none;
+  border-bottom: 1px solid red;
+  width: 16rem;
+  outline: none;
+  border-radius: 3px;
+  
+}
+.input-box span{
+  margin: 0;
+    margin-top: -14px;
+    justify-content: center;
+    color: red;
+  
+}
+.input-box .patient-gender{
+  width: 23em;
+}

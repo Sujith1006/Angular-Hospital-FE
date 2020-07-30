@@ -1,0 +1,71 @@
+.main-content{
+  background-color:#e8e4e4;
+  margin: 0;
+  display: flex;
+}
+.inner-div-1{
+  background-color: white;
+  width: 75vw;
+  /* height: 100vh; */
+  margin: 33px;
+ 
+}
+.inner-div-1 p{
+  margin: 0;
+}
+.door{
+  width: 150px;
+}
+.patient
+{
+  width: 63px;
+    position: relative; 
+     left:-76px
+
+}
+.roomrow{
+  display: flex;
+  flex-wrap: wrap;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+
+}
+.info h1{
+  margin: 0;
+}
+.room-indi-patient{
+  display: inline-flex;
+}
+.patient-true{
+  border: 1px solid;
+}
+.treat-div{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+.btn-treat{
+  border: none;
+  padding: 9px 20px;
+background-color: #f74141;
+color: white;
+cursor: pointer;
+}
+.notification
+{
+
+ height: 60%;
+ overflow: hidden;
+ overflow-y: scroll;
+
+}
+.notification::-webkit-scrollbar{
+  display: none;
+}
+.data{
+ box-shadow: 1px 1px 5px 0px grey;
+  
+}

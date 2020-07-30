@@ -1,0 +1,28 @@
+<div class="hos-title">
+  <div class="top-title">
+  <img src='../../../assets//vproject291batch36-nunoon-36-medical.jpg' class="hos"/>
+  <h1>City Hospital</h1>
+  </div>
+  <div class="log-out" (click)="LogOut()">
+    <h4 class="log-btn">LogOut</h4>
+    <img src='../../../assets//logout (1).png' />
+  </div>
+  </div>
+<div class="main-div">
+  <div class="title-div">
+    <div class="dash-contents">
+      <div class="dash-img">
+        <h2>Dashboard</h2>
+        <img src="../../../assets//icons8-menu.svg" alt="dashimg" />
+      </div>
+      <ul class="dash-inner-list">
+        <li [routerLink]="['/dashboard/form']">Add new patient</li>
+        <li [routerLink]="['/dashboard/viewallpatients']">View all patients</li>
+        <li [routerLink]="['/dashboard/generaterooms']">Add new Room</li>
+        <li [routerLink]="['/dashboard/addpatienttoroom']">Add Patient to room</li>
+      </ul>
+     
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

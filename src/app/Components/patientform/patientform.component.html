@@ -1,0 +1,90 @@
+<div class="main-form">
+  <h1>Registration Form</h1>
+  <form [formGroup]="patient" (ngSubmit)="SubmitPatienRecords()">
+    <div class="input-box">
+      <div class="patient-name">
+        <label>Patientname</label>
+        <input
+          type="text"
+          formControlName="name"
+          pattern='^[A-Za-z]+$'
+          name="name"
+          [ngClass]="submit && f.name.errors? 'error' : 'patient-name-input'"
+        />
+      </div>
+      <!-- <span *ngIf='submit && f.name.errors.required'> * Field Required</span> -->
+      <span *ngIf='submit && f.name.errors?.pattern'>*No Special Characters are allowed</span>
+      <div class="patient-gender">
+        <label>Gender</label>
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+          formControlName="gender"
+        />
+        <label for="male">Male</label><br />
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+          formControlName="gender"
+        />
+        <label for="female">Female</label><br />
+      <!-- <span *ngIf='submit && f.gender.errors.required'>* Field Required</span> -->
+
+      </div>
+      <div class="patient-address">
+        <label>Address</label>
+        <textarea
+          [ngClass]="submit && f.address.errors ? 'text-error' : 'patient-address-textarea'"
+          formControlName="address"
+          minlength="20"
+        ></textarea>
+      </div>
+      <!-- <span *ngIf='submit && f.address.errors.required'>Field Required</span> -->
+      <div class="patient-name">
+        <label>PhoneNumber</label>
+        <input
+          type="tel"
+          formControlName="phonenumber"
+          pattern="[0-9]{10}"
+          [ngClass]=" submit && f.phonenumber.errors ?'error':'patient-name-input'  "
+        />
+    
+      </div>
+      <!-- <span *ngIf='submit && f.phonenumber.errors.required'>Field Required</span> -->
+      <span *ngIf='submit && f.phonenumber.errors?.pattern'>PhoneNumber must be a 10 digit number</span>
+
+      <div class="patient-name">
+        <label>Blood-Group</label>
+        <input
+          type="text"
+          formControlName="bloodgroup"
+          pattern='^(A|B|AB|O)[-+]'
+          [ngClass]="
+            submit && f.bloodgroup.errors ? 'error' : 'patient-name-input'
+          "
+        />
+      </div>
+      <span *ngIf='submit && f.bloodgroup.errors?.pattern'>Blood group must be(A+,A-,B+,B-,AB+,O,..)formats</span>
+      <div class="patient-name">
+        <label>Symptoms</label>
+        <input
+          type="text"
+          pattern='^[A-Za-z]+$'
+          formControlName="symptoms"
+          [ngClass]="
+            submit && f.symptoms.errors ? 'error' : 'patient-name-input'
+          "
+        />
+      </div>
+      <span *ngIf='submit && f.symptoms.errors?.pattern'>No special characters are allowed</span>
+
+      <div class="submit">
+        <button class="btn-submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

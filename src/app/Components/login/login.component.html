@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="main-div">
+      <div class="image-div">
+        <!-- <img
+          src="https://images-na.ssl-images-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB443130112_.png"
+        /> -->
+      </div>
+  
+      <div class="inner-div-1">
+        <div class="signup-dialog">
+          <div class="input-box">
+            <label>Username</label>
+            <input type="email" class="box" [(ngModel)]="user.username" required />
+          </div>
+          <div class="input-box">
+            <label>Password</label>
+            <input
+              type="password"
+              class="box"
+              [(ngModel)]="user.password"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <button class="box" (click)="onSubmit()">Signin</button>
+          </div>
+          <div class="input-box-1">
+            <span class="login-text">Create an account?</span>
+            <!-- <a routerLink="/"> SignUp</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

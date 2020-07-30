@@ -1,0 +1,21 @@
+.main-div{
+  position: absolute;
+  top: 12em;
+  left: 37em;
+  box-shadow: 1px 2px 16px grey;
+  background: white;
+    border-radius: 8px;
+    height: 50%;
+    width: 25%;
+}
+.main-div h1{
+  margin: 15px;
+}
+.add-btn{
+  padding: 5px;
+  margin: 50px;
+  background-color: #ace0b7;
+}
+.rooms-div{
+  text-align: center;
+}
